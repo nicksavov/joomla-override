@@ -95,7 +95,7 @@ abstract class JoomlaOverrideHelperOverride
 	 */
 	static public function fixDefines($bufferContent)
 	{
-		//detect if source file use some constants
+		//detect if source file uses some constants
 		preg_match_all('/JPATH_COMPONENT(_SITE|_ADMINISTRATOR)|JPATH_COMPONENT/i', $bufferContent, $definesSource);
 		//replace JPATH_COMPONENT constants if found, because we are loading before define these constants
 		if (count($definesSource[0]))
